@@ -1,0 +1,11 @@
+server:
+  port: 8004
+
+
+#注意zookeeper存放的是临时节点   不会像Eureka一样有自我保护机制  服务一断掉就会直接清除节点
+spring:
+  application:
+    name: cloud-provider-payment8004
+  cloud:
+    zookeeper:
+      connect-string: 192.168.3.90:2181
